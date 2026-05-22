@@ -3,11 +3,13 @@ import {
   Container,
   Head,
   Heading,
-  Hr,
   Html,
   Preview,
   Section,
   Text,
+  Tailwind,
+  Row,
+  Column,
 } from '@react-email/components';
 import * as React from 'react';
 
@@ -39,99 +41,131 @@ export const QuoteEmail = ({
   return (
     <Html>
       <Head />
-      <Preview>New Quote Request from {firstName} at {company}</Preview>
-      <Body style={main}>
-        <Container style={container}>
-          <Heading style={h1}>New Quote Request</Heading>
-          <Text style={text}>
-            You have received a new quote request from the Lifestylemi website.
-          </Text>
-          <Hr style={hr} />
-          
-          <Section style={section}>
-            <Text style={heading2}>Contact Details</Text>
-            <Text style={text}><strong>Name:</strong> {firstName} {lastName}</Text>
-            <Text style={text}><strong>Email:</strong> {email}</Text>
-            <Text style={text}><strong>Phone:</strong> {phone}</Text>
-            <Text style={text}><strong>Company:</strong> {company}</Text>
-            <Text style={text}><strong>Location:</strong> {location}</Text>
-          </Section>
+      <Preview>New Quote Request: {serviceType} for {company}</Preview>
+      <Tailwind>
+        <Body className="bg-[#f3f4f6] font-sans pt-10 pb-10">
+          <Container className="bg-white border border-solid border-[#e5e7eb] rounded-2xl mx-auto overflow-hidden shadow-lg max-w-[600px] w-full">
+            {/* Header / Brand */}
+            <Section className="bg-[#0f172a] px-8 py-10 text-center">
+              <Text className="text-3xl font-bold text-white tracking-tight m-0 uppercase">
+                LIFESTYLEMI
+              </Text>
+              <Text className="text-[#94a3b8] text-[13px] mt-2 mb-0 uppercase tracking-widest font-semibold">
+                Premium Connectivity Solutions
+              </Text>
+            </Section>
 
-          <Hr style={hr} />
+            {/* Hero Accent for Service Type */}
+            <Section className="bg-[#3b82f6] px-10 py-6 text-center">
+              <Text className="text-white/80 text-[12px] font-bold uppercase tracking-widest m-0 mb-1">
+                Requested Service
+              </Text>
+              <Text className="text-white text-[22px] font-bold m-0">
+                {serviceType}
+              </Text>
+            </Section>
 
-          <Section style={section}>
-            <Text style={heading2}>Request Details</Text>
-            <Text style={text}><strong>Service Requested:</strong> {serviceType}</Text>
-            {currentProvider && <Text style={text}><strong>Current Provider:</strong> {currentProvider}</Text>}
-            {quantity && <Text style={text}><strong>Quantity/Lines:</strong> {quantity}</Text>}
-            {message && (
-              <>
-                <Text style={text}><strong>Additional Message:</strong></Text>
-                <Text style={paragraph}>{message}</Text>
-              </>
-            )}
-          </Section>
-        </Container>
-      </Body>
+            {/* Main Content Area */}
+            <Section className="px-10 py-8">
+              <Heading className="text-[#0f172a] text-[20px] font-bold p-0 m-0 mb-6 uppercase tracking-wide">
+                Client Details
+              </Heading>
+
+              {/* 2-Column Grid Rows for details */}
+              <Section className="w-full mb-3">
+                <Row>
+                  <Column className="w-[50%] pr-2 align-top">
+                    <Section className="bg-[#f8fafc] border-l-4 border-solid border-[#0f172a] px-5 py-4 rounded-r-lg">
+                      <Text className="text-[#64748b] font-bold uppercase tracking-wider text-[10px] m-0 mb-1">Name</Text>
+                      <Text className="text-[#0f172a] font-semibold text-[15px] m-0">{firstName} {lastName}</Text>
+                    </Section>
+                  </Column>
+                  <Column className="w-[50%] pl-2 align-top">
+                    <Section className="bg-[#f8fafc] border-l-4 border-solid border-[#0f172a] px-5 py-4 rounded-r-lg">
+                      <Text className="text-[#64748b] font-bold uppercase tracking-wider text-[10px] m-0 mb-1">Company</Text>
+                      <Text className="text-[#0f172a] font-semibold text-[15px] m-0">{company}</Text>
+                    </Section>
+                  </Column>
+                </Row>
+              </Section>
+
+              <Section className="w-full mb-3">
+                <Row>
+                  <Column className="w-[50%] pr-2 align-top">
+                    <Section className="bg-[#f8fafc] border-l-4 border-solid border-[#0f172a] px-5 py-4 rounded-r-lg">
+                      <Text className="text-[#64748b] font-bold uppercase tracking-wider text-[10px] m-0 mb-1">Email</Text>
+                      <Text className="text-[#0f172a] font-semibold text-[15px] m-0">
+                        <a href={`mailto:${email}`} className="text-[#3b82f6] no-underline">{email}</a>
+                      </Text>
+                    </Section>
+                  </Column>
+                  <Column className="w-[50%] pl-2 align-top">
+                    <Section className="bg-[#f8fafc] border-l-4 border-solid border-[#0f172a] px-5 py-4 rounded-r-lg">
+                      <Text className="text-[#64748b] font-bold uppercase tracking-wider text-[10px] m-0 mb-1">Phone</Text>
+                      <Text className="text-[#0f172a] font-semibold text-[15px] m-0">{phone}</Text>
+                    </Section>
+                  </Column>
+                </Row>
+              </Section>
+
+              <Section className="bg-[#f8fafc] border-l-4 border-solid border-[#0f172a] px-5 py-4 mb-8 rounded-r-lg w-full">
+                <Text className="text-[#64748b] font-bold uppercase tracking-wider text-[10px] m-0 mb-1">Location</Text>
+                <Text className="text-[#0f172a] font-semibold text-[15px] m-0">{location}</Text>
+              </Section>
+
+              {/* Additional Details */}
+              {(currentProvider || quantity || message) && (
+                <>
+                  <Heading className="text-[#0f172a] text-[20px] font-bold p-0 m-0 mb-6 uppercase tracking-wide">
+                    Additional Information
+                  </Heading>
+
+                  {(currentProvider || quantity) && (
+                    <Section className="w-full mb-3">
+                      <Row>
+                        {currentProvider && (
+                          <Column className={`align-top w-[50%] ${quantity ? 'pr-2' : ''}`}>
+                            <Section className="bg-[#f8fafc] border-l-4 border-solid border-[#cbd5e1] px-5 py-4 rounded-r-lg">
+                              <Text className="text-[#64748b] font-bold uppercase tracking-wider text-[10px] m-0 mb-1">Current Provider</Text>
+                              <Text className="text-[#0f172a] font-semibold text-[15px] m-0">{currentProvider}</Text>
+                            </Section>
+                          </Column>
+                        )}
+                        {quantity && (
+                          <Column className={`align-top w-[50%] ${currentProvider ? 'pl-2' : ''}`}>
+                            <Section className="bg-[#f8fafc] border-l-4 border-solid border-[#cbd5e1] px-5 py-4 rounded-r-lg">
+                              <Text className="text-[#64748b] font-bold uppercase tracking-wider text-[10px] m-0 mb-1">Quantity/Lines</Text>
+                              <Text className="text-[#0f172a] font-semibold text-[15px] m-0">{quantity}</Text>
+                            </Section>
+                          </Column>
+                        )}
+                      </Row>
+                    </Section>
+                  )}
+
+                  {message && (
+                    <Section className="bg-[#f8fafc] border-l-4 border-solid border-[#cbd5e1] px-5 py-4 mb-3 rounded-r-lg w-full">
+                      <Text className="text-[#64748b] font-bold uppercase tracking-wider text-[10px] m-0 mb-2">Message</Text>
+                      <Text className="text-[#334155] text-[14px] leading-[22px] m-0 whitespace-pre-wrap">{message}</Text>
+                    </Section>
+                  )}
+                </>
+              )}
+            </Section>
+
+            {/* Footer */}
+            <Section className="bg-[#f8fafc] border-t border-solid border-[#e5e7eb] px-10 py-6">
+              <Text className="text-[#94a3b8] text-[12px] leading-[20px] text-center m-0">
+                This email was automatically generated from the Lifestylemi website quote form.
+                <br />
+                © {new Date().getFullYear()} Lifestylemi. All rights reserved.
+              </Text>
+            </Section>
+          </Container>
+        </Body>
+      </Tailwind>
     </Html>
   );
-};
-
-// Styles for React Email
-const main = {
-  backgroundColor: '#f6f9fc',
-  fontFamily:
-    '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif',
-};
-
-const container = {
-  backgroundColor: '#ffffff',
-  margin: '0 auto',
-  padding: '40px 20px',
-  borderRadius: '8px',
-  border: '1px solid #eaeaea',
-  maxWidth: '600px',
-};
-
-const h1 = {
-  color: '#333',
-  fontSize: '24px',
-  fontWeight: '600',
-  lineHeight: '1.4',
-  margin: '0 0 20px',
-};
-
-const heading2 = {
-  color: '#555',
-  fontSize: '18px',
-  fontWeight: '600',
-  margin: '0 0 10px',
-};
-
-const text = {
-  color: '#333',
-  fontSize: '16px',
-  lineHeight: '1.4',
-  margin: '0 0 10px',
-};
-
-const paragraph = {
-  color: '#333',
-  fontSize: '16px',
-  lineHeight: '1.6',
-  backgroundColor: '#f9f9f9',
-  padding: '12px',
-  borderRadius: '4px',
-  margin: '10px 0 0',
-};
-
-const section = {
-  padding: '10px 0',
-};
-
-const hr = {
-  borderColor: '#e6ebf1',
-  margin: '20px 0',
 };
 
 export default QuoteEmail;
