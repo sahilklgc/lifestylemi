@@ -26,7 +26,7 @@ export function Header() {
         <div className="flex items-center gap-6 md:gap-10">
           <Link href="/" className="flex items-center space-x-2">
             <span className="font-heading text-xl font-bold tracking-tight">
-              Lifestylemi
+              LifestyleMI
             </span>
           </Link>
           <nav className="hidden md:flex gap-6">

@@ -15,7 +15,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Lifestylemi | Connectivity & Technology Services",
+  title: "LifestyleMI | Connectivity & Technology Services",
   description: "Professional business services for communication, connectivity, and technology.",
 };
 

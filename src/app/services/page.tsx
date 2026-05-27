@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Wifi, Smartphone, Server, MapPin, Briefcase, ShoppingCart, Shield } from "lucide-react";
 
 export const metadata = {
-  title: "Our Services | Lifestylemi",
+  title: "Our Services | LifestyleMI",
   description: "Explore our comprehensive suite of connectivity, communication, and technology services.",
 };
 

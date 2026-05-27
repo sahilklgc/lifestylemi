@@ -8,7 +8,7 @@ export function Footer() {
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-4">
               <span className="font-heading text-xl font-bold tracking-tight">
-                Lifestylemi
+                LifestyleMI
               </span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
@@ -41,13 +41,13 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>contact@lifestylemi.com</li>
               <li>1-800-LIFESTYLE</li>
-              <li>123 Tech Avenue, Suite 100<br/>Business City, ST 12345</li>
+              <li>7310 Woodward Ave #500<br/>Detroit, MI 48202</li>
             </ul>
           </div>
         </div>
         
         <div className="border-t mt-12 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Lifestylemi. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} LifestyleMI. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-primary transition-colors">Terms of Service</Link>

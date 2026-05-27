@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     console.log("Processing contact inquiry from:", data.name);
 
     const { data: emailResponse, error } = await resend.emails.send({
-      from: "Lifestylemi <onboarding@resend.dev>", // Using testing email by default
+      from: "LifestyleMI <onboarding@resend.dev>", // Using testing email by default
       to: ["lakeshoreglobalcorporation@gmail.com"], // Replace with your actual email to receive leads
       subject: `New Contact Inquiry from ${data.name}`,
       react: ContactEmail({ ...data }) as React.ReactElement,

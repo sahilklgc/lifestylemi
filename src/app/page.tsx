@@ -120,7 +120,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">Why Choose Lifestylemi?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">Why Choose LifestyleMI?</h2>
               <p className="text-lg text-muted-foreground mb-6">
                 We are more than just a broker. We are your dedicated technology partner, committed to finding the right solutions for your unique operational needs.
               </p>

@@ -96,9 +96,9 @@ export const ContactEmail = ({
             {/* Footer */}
             <Section className="bg-[#f8fafc] border-t border-solid border-[#e5e7eb] px-10 py-6">
               <Text className="text-[#94a3b8] text-[12px] leading-[20px] text-center m-0">
-                This email was automatically generated from the Lifestylemi website contact form.
+                This email was automatically generated from the LifestyleMI website contact form.
                 <br />
-                © {new Date().getFullYear()} Lifestylemi. All rights reserved.
+                © {new Date().getFullYear()} LifestyleMI. All rights reserved.
               </Text>
             </Section>
           </Container>

@@ -3,8 +3,8 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const metadata = {
-  title: "About Us | Lifestylemi",
-  description: "Learn more about Lifestylemi, your trusted partner for communication and technology services.",
+  title: "About Us | LifestyleMI",
+  description: "Learn more about LifestyleMI, your trusted partner for communication and technology services.",
 };
 
 export default function AboutPage() {
@@ -13,7 +13,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="bg-muted/30 pt-20 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold font-heading mb-6">About Lifestylemi</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold font-heading mb-6">About LifestyleMI</h1>
           <p className="text-xl text-muted-foreground">
             We are dedicated to simplifying technology procurement and connectivity for businesses of all sizes.
           </p>
@@ -27,7 +27,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold font-heading mb-6">Our Mission</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                At Lifestylemi, we understand that navigating the complex world of telecommunications and IT services can be overwhelming. Our mission is to bridge the gap between businesses and top-tier technology providers, ensuring you get the best solutions tailored to your unique needs without the hassle.
+                At LifestyleMI, we understand that navigating the complex world of telecommunications and IT services can be overwhelming. Our mission is to bridge the gap between businesses and top-tier technology providers, ensuring you get the best solutions tailored to your unique needs without the hassle.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 We act as your unbiased advocate, leveraging our strong carrier relationships to secure the most competitive rates and reliable services, allowing you to focus on what you do best—running your business.

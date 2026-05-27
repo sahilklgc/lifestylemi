@@ -90,7 +90,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Office</h3>
-                    <p className="text-muted-foreground mt-1">123 Tech Avenue, Suite 100<br/>Business City, ST 12345</p>
+                    <p className="text-muted-foreground mt-1">7310 Woodward Ave #500<br/>Detroit, MI 48202</p>
                   </div>
                 </div>
               </div>
