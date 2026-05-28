@@ -39,9 +39,9 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4 font-heading">Contact</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>contact@lifestylemi.com</li>
-              <li>1-800-LIFESTYLE</li>
-              <li>7310 Woodward Ave #500<br/>Detroit, MI 48202</li>
+              <li>7310 Woodward Ave #500, Detroit, MI 48202</li>
+              <li>info@lifestylemi.com</li>
+              <li>(248) 252-5958</li>
             </ul>
           </div>
         </div>

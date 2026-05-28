@@ -69,8 +69,8 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg">Phone</h3>
-                    <p className="text-muted-foreground mt-1">1-800-LIFESTYLE</p>
+                    <h3 className="font-bold text-foreground">Phone</h3>
+                    <p className="text-muted-foreground mt-1">(248) 252-5958</p>
                     <p className="text-sm text-muted-foreground">Mon-Fri from 8am to 6pm EST.</p>
                   </div>
                 </div>
@@ -79,8 +79,8 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg">Email</h3>
-                    <p className="text-muted-foreground mt-1">contact@lifestylemi.com</p>
+                    <h3 className="font-bold text-foreground">Email</h3>
+                    <p className="text-muted-foreground mt-1">info@lifestylemi.com</p>
                     <p className="text-sm text-muted-foreground">We usually respond within 24 hours.</p>
                   </div>
                 </div>
