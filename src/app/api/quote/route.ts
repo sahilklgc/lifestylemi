@@ -11,8 +11,9 @@ export async function POST(request: Request) {
     console.log("Processing quote request for:", data.company);
 
     const { data: emailResponse, error } = await resend.emails.send({
-      from: "LifestyleMI <onboarding@resend.dev>", // Using testing email by default
-      to: ["lakeshoreglobalcorporation@gmail.com"], // Replace with your actual email to receive leads
+      from: "LifestyleMI <info@lifestylemi.com>",
+      to: ["info@lifestylemi.com"], 
+      replyTo: data.email,
       subject: `New Quote Request: ${data.serviceType} - ${data.company}`,
       react: QuoteEmail({ ...data }) as React.ReactElement,
     });
